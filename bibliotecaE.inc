@@ -2,10 +2,10 @@
 ;Biblioteca de registradores
 ;------------------------------------
 segment .data
-    LF          equ 0xA  ; Line feed
+    LF          equ 0xA  ; Line feed (pula linha)
     NULL        equ 0xD  ; Final da String
     SYS_CALL    equ 0x80 ; Envia informacao ao SO
-    ; EAX ou RAX
+    ; EAX ou RAX (32 ou 64 bits)
     SYS_EXIT    equ 0x1  ; codigo de chamada para finalizar
     SYS_READ    equ 0x3; ; Operacao de leitura
     SYS_WRITE   equ 0x4  ; Operacao de escrita
@@ -42,7 +42,7 @@ string_to_int:
 ;------------------------------------
 ;Inteiro para string
 ;------------------------------------
-;Entrada: inteiro para EAX
+;Entrada: inteiro para EAX 
 ;Saida : BUFFER (valor ECX) TAM_BUFFER (EDX)
 ;------------------------------------ 
 

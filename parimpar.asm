@@ -37,7 +37,7 @@ entrada_valor:
 verificar:
     mov edx, 0x0        ; Zerar edx
     mov ebx, 0x2        ; Move o numero 2 para ebx
-    div ebx             ; Divide eax com ebx, o reste vai para edx
+    div ebx             ; Divide eax com ebx, o resto vai para edx
     cmp edx, 0x0        ; Compara edx com 0 '0x0' 
     jz mostra_par       ; (jump if zero) se resultado da subtracao for 0 (edx-0), vai para mostra_par
 
